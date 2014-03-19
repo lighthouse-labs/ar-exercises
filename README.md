@@ -2,8 +2,10 @@
 
 ## Instructions
 
-Run irb and require the main.rb file so that all your classes are loaded.
+Run irb and require the `run.rb` file so that all your classes are loaded.
 
-    irb -r "./main.rb"
+    ruby run.rb
 
-Remember to commit at logical steps (like at the end of every exercise)
+Follow the instructions to work on the exercises within the `exercises` folder.
+
+Remember to commit at logical steps (like at the end of every exercise).

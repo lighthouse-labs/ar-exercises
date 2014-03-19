@@ -1,11 +1,17 @@
 require 'active_record'
-require_relative 'store'
-require_relative 'employee'
+require_relative 'lib/store'
+require_relative 'lib/employee'
 
 print "Establishing connection to database ..."
 ActiveRecord::Base.establish_connection(
-  :adapter => "sqlite3",
-  :database  => "db.sqlite"
+  adapter: 'postgresql',
+  encoding: 'unicode',
+  pool: 5,
+  database: 'dd0g8jjf5k806s',
+  username: 'awidipxgjksoce',
+  password: '-PqtRdd6LbLynv9vcNg4YHTm7T',
+  host: 'ec2-174-129-21-42.compute-1.amazonaws.com',
+  port: 5432
 )
 puts "CONNECTED"
 
@@ -37,6 +43,6 @@ puts "DONE"
 print "Clearing Database (start fresh everytime) ..."
 Store.delete_all
 Employee.delete_all
-ActiveRecord::Base.connection.execute("UPDATE sqlite_sequence SET seq = 0 WHERE name = 'stores';")
-ActiveRecord::Base.connection.execute("UPDATE sqlite_sequence SET seq = 0 WHERE name = 'employees';")
+ActiveRecord::Base.connection.execute("ALTER SEQUENCE stores_id_seq RESTART WITH 1;")
+ActiveRecord::Base.connection.execute("ALTER SEQUENCE employees_id_seq RESTART WITH 1;")
 puts "DONE"
