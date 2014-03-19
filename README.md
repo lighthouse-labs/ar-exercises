@@ -83,7 +83,7 @@ Remember to `git commit` (and `git push`) at logical steps, like at the end of e
 
 3. Output the number of stores that are generating $1M or more in annual sales. _Hint:_ Chain together `where` and `size` (or `count`) ActiveRecord methods
 
-### Exercise 6: Setup parent/child relationship for Stores and Employees
+### Exercise 6: Parent/child relationship
 
 We haven't used the Employee class (and employees table) at all yet. If you look at this table's column structure, you'll find that it has a `store_id` (integer) column. This is a column that identified which store each employee belongs to. It points to the `id` (integer) column of that store.
 
