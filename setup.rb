@@ -9,7 +9,7 @@ ActiveRecord::Base.establish_connection(
   pool: 5,
   database: 'dd0g8jjf5k806s',
   username: 'awidipxgjksoce',
-  password: '-PqtRdd6LbLynv9vcNg4YHTm7T',
+  password: 'xxxxx',
   host: 'ec2-174-129-21-42.compute-1.amazonaws.com',
   port: 5432
 )
