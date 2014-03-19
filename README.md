@@ -20,3 +20,5 @@ Example:
 Follow the instructions to work on the exercises within the `exercises` folder.
 
 Remember to commit at logical steps (like at the end of every exercise).
+
+**Note:** You do not need to / should not comment out your code in each exercise as you move on to the next one. The exercises in this assignment are meant to build on and continue from the previous ones. That's why you see them requiring the previous ones.
