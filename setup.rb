@@ -19,17 +19,17 @@ ActiveRecord::Base.establish_connection(
 )
 puts "CONNECTED"
 
-print "Setting up Database (recreating tables) ..."
+puts "Setting up Database (recreating tables) ..."
 
 ActiveRecord::Schema.define do
   drop_table :stores
   drop_table :employees
-  create_table :stores do |table|
-    table.column :name, :string
-    table.column :annual_revenue, :string
-    table.column :mens_apparel, :boolean
-    table.column :womens_apparel, :boolean
-    table.timestamps
+  create_table :stores do |t|
+    t.column :name, :string
+    t.column :annual_revenue, :integer
+    t.column :mens_apparel, :boolean
+    t.column :womens_apparel, :boolean
+    t.timestamps
   end
   create_table :employees do |table|
     table.references :store
@@ -40,4 +40,4 @@ ActiveRecord::Schema.define do
   end
 end
 
-puts "DONE"
+puts "Setup DONE"
