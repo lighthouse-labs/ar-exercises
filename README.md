@@ -2,9 +2,9 @@
 
 ## Introduction
 
-You'll find that it has two ActiveRecord “models” (classes):
-Store
-Employee
+You'll find that this project has two ActiveRecord "models" (classes):
+1. Store
+2. Employee
 
 This means that there is a `stores` table and an `employees` table in the database that it is using. But since we are using an ORM, we just use the two ruby classes and their instances to manage (CRUD) that data.
 
