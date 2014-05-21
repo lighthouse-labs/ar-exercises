@@ -19,8 +19,8 @@ That said, feel free to connect to your heroku postgres database using `psql` or
 
 1. Create a new PG database on heroku.
 2. Grab (copy) it's connection information/creds and paste it into the `establish_connection` method call in `setup.rb`. This will allow AR to connect to *your* PG database on Heroku.
-4. Run `bundle install` to install the gems
-5. Run the first exercise file to make sure the database connection is working: `ruby exercises/exercise_1.rb`. It should just output "Exercise 1" at the end, since you don't yet have any code in there.
+3. Run `bundle install` to install the gems
+4. Run the first exercise file to make sure the database connection is working: `ruby exercises/exercise_1.rb`. It should just output "Exercise 1" at the end, since you don't yet have any code in there.
 
 ### Running Exercises
 
