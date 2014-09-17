@@ -47,7 +47,7 @@ Follow the instructions to work on the exercises within the `exercises` folder. 
   * Richmond (annual_revenue of 1260000 carries women's apparel only)
   * Gastown (annual_revenue of 190000 carries men's apparel only)
 
-2. Output (`puts`) the number of the stores using ActiveRecord's `count` method, to ensure that there are two stores in the database
+2. Output (`puts`) the number of the stores using ActiveRecord's `count` method, to ensure that there are three stores in the database
 
 ### Exercise 2: Update the first store
 
