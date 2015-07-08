@@ -38,6 +38,10 @@ Follow the instructions to work on the exercises within the `exercises` folder. 
 * You do not need to / should not comment out your code in each exercise as you move on to the next one. The exercises in this assignment are meant to build on and continue from the previous ones. That's why you see them requiring the previous ones.
 * The setup ruby script actually drops and recreates the db tables with every run of the exercise. This is of course not practical in most real apps, because the data is usually meant to stay long term.
 
+You can work with the models with irb by running
+
+    irb -r './setup.rb'
+
 ## Exercises
 
 ### Exercise 1: Create 3 stores
