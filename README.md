@@ -100,7 +100,7 @@ Let's tell Active Record that these two tables are in fact related via the `stor
   * Employees must always have a store that they belong to (can't have an employee that is not assigned a store)
   * Stores must always have a name that is a minimum of 3 characters
   * Stores have an annual_revenue that is a number (integer) that must be 0 or more
-  * BONUS: Stores must carry at least one of the men's or women's apparel (hint: use a custom validation)
+  * BONUS: Stores must carry at least one of the men's or women's apparel (hint: use a [custom validation method](http://guides.rubyonrails.org/active_record_validations.html#custom-methods) - **don't** use a `Validator` class)
 2. Much like with the contact app (except not in a loop), Ask the user for a store name (store it in a variable)
 3. Attempt to create a store with the inputted name but leave out the other fields (annual_revenue, mens_apparel, and womens_apparel)
 4. Display the error messages provided back from ActiveRecord to the user (one on each line) after you attempt to save/create the record
