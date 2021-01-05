@@ -6,8 +6,10 @@ puts "----------"
 
 # Your code goes here ...
 
-@store1 = Store.select(id: 1)
+@store1 = Store.where(id: 1)
 
-@store2 = Store.select(id: 2)
+puts @store1.name
+
+@store2 = Store.where(id: 2)
 
 Store.update(1, :name => 'Calgary')

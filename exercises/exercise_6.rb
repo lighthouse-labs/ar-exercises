@@ -13,4 +13,6 @@ class Employee < ActiveRecord::Base
   belongs_to :store
 end
 
+puts @store1.name
+
 @store1.employees.create(first_name: "Khurram", last_name: "Virani", hourly_rate: 60)
