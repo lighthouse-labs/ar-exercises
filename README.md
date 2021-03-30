@@ -17,7 +17,7 @@ That said, feel free to connect to your Postgres database using `psql` or pgAdmi
 
 ### M1 Instructions
 
-Once downloaded, please follow those instructions before completing the setup part of the instructions:
+If you have an Apple M1 machine, please follow those instructions before completing the setup part of the instructions, do not do them if you're not on an M1 machine!
 
 1. Confirm that you are running version 2.6.6 of ruby (ruby -v)
 2. Remove the Gemfile.lock file
