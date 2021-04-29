@@ -11,7 +11,7 @@ puts "----------"
 
 # Your code goes here ...
 
-print "Pleas input a store name: "
+print "Please input a store name: "
 store_name = gets.chomp
 
 new_store = Store.new(name: store_name)
