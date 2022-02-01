@@ -1,7 +1,7 @@
 require_relative '../setup'
 
 puts "Exercise 1"
-puts "----------"
+puts "-----------"
 
 # Your code goes below here ...
 Store.create(name: "Burnaby",
