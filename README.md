@@ -15,23 +15,15 @@ That said, feel free to connect to your Postgres database using `psql` or pgAdmi
 
 ## Instructions
 
-### M1 Instructions
-
-If you have an Apple M1 machine, please follow those instructions before completing the setup part of the instructions, do not do them if you're not on an M1 machine!
-
-1. Confirm that you are running version 2.6.6 of ruby (ruby -v)
-2. Remove the Gemfile.lock file
-3. In Gemfile, change the version of ActiveRecord from `4.2.6` to `4.2.11`
-4. In Gemfile, change the `gem 'pg'` line to `gem 'pg', '~> 0.21.0'`
-
 ### Setup
 
 1. Create a new Postgres database. Use `psql postgres` to connect to the database server. Use `create database ar_exercises;` to create the database.
-2. Take a look at the `establish_connection` method call in `setup.rb`. This will allow Active Record to connect to *your* Postgres database. If you are using vagrant, you should not need to make any changes here.
+2. Take a look at the `establish_connection` method call in `setup.rb`. This will allow Active Record to connect to _your_ Postgres database. If you are using vagrant, you should not need to make any changes here.
 3. Run `bundle install` to install the gems.
 4. Run the first exercise file to make sure the database connection is working: `bundle exec ruby exercises/exercise_1.rb`. It should just output "Exercise 1" at the end, since you don't yet have any code in there.
-  * Running without `bundle exec` may run the wrong version of ruby or it may use the correct version of ruby but with incorrect gem versions. 
-  * Using `bundle exec` for ruby scripts/apps is fairly common in the Ruby community.
+
+- Running without `bundle exec` may run the wrong version of ruby or it may use the correct version of ruby but with incorrect gem versions.
+- Using `bundle exec` for ruby scripts/apps is fairly common in the Ruby community.
 
 ### Running Exercises
 
@@ -45,9 +37,9 @@ Follow the instructions to work on the exercises within the `exercises` folder. 
 
 **IMPORTANT:**
 
-* Remember to `git commit` (and `git push`) at logical steps, like at the end of every exercise.
-* You do not need to / should not comment out your code in each exercise as you move on to the next one. The exercises in this assignment are meant to build on and continue from the previous ones. That's why you see them requiring the previous ones.
-* The setup ruby script actually drops and recreates the db tables with every run of the exercise. This is of course not practical in most real apps, because the data is usually meant to stay long term.
+- Remember to `git commit` (and `git push`) at logical steps, like at the end of every exercise.
+- You do not need to / should not comment out your code in each exercise as you move on to the next one. The exercises in this assignment are meant to build on and continue from the previous ones. That's why you see them requiring the previous ones.
+- The setup ruby script actually drops and recreates the db tables with every run of the exercise. This is of course not practical in most real apps, because the data is usually meant to stay long term.
 
 You can work with the models with irb by running
 
@@ -58,9 +50,11 @@ You can work with the models with irb by running
 ### Exercise 1: Create 3 stores
 
 1. Use Active Record's `create` class method multiple times to create 3 stores in the database:
-  * Burnaby (annual_revenue of 300000, carries men's and women's apparel)
-  * Richmond (annual_revenue of 1260000 carries women's apparel only)
-  * Gastown (annual_revenue of 190000 carries men's apparel only)
+
+- Burnaby (annual_revenue of 300000, carries men's and women's apparel)
+- Richmond (annual_revenue of 1260000 carries women's apparel only)
+- Gastown (annual_revenue of 190000 carries men's apparel only)
+
 2. Output (`puts`) the number of the stores using ActiveRecord's `count` method, to ensure that there are three stores in the database.
 
 ### Exercise 2: Update the first store
@@ -78,9 +72,11 @@ You can work with the models with irb by running
 ### Exercise 4: Loading a subset of stores
 
 1. Borrowing and modifying the code from Exercise one, create 3 more stores:
-  * Surrey (annual_revenue of 224000, carries women's apparel only)
-  * Whistler (annual_revenue of 1900000 carries men's apparel only)
-  * Yaletown (annual_revenue of 430000 carries men's and women's apparel)
+
+- Surrey (annual_revenue of 224000, carries women's apparel only)
+- Whistler (annual_revenue of 1900000 carries men's apparel only)
+- Yaletown (annual_revenue of 430000 carries men's and women's apparel)
+
 2. Using the `where` class method from Active Record, fetch (a collection of) only those stores that carry men's apparel. Assign the results to a variable `@mens_stores`.
 3. Loop through each of these stores and output their name and annual revenue on each line.
 4. Do another fetch but this time load stores that carry women's apparel and are generating less than $1M in annual revenue.
@@ -105,13 +101,15 @@ Let's tell Active Record that these two tables are in fact related via the `stor
 ### Exercise 7: Validations for both models
 
 1. Add validations to two models to enforce the following business rules:
-  * Employees must always have a first name present
-  * Employees must always have a last name present
-  * Employees have a hourly_rate that is a number (integer) between 40 and 200
-  * Employees must always have a store that they belong to (can't have an employee that is not assigned a store)
-  * Stores must always have a name that is a minimum of 3 characters
-  * Stores have an annual_revenue that is a number (integer) that must be 0 or more
-  * BONUS: Stores must carry at least one of the men's or women's apparel (hint: use a [custom validation method](http://guides.rubyonrails.org/active_record_validations.html#custom-methods) - **don't** use a `Validator` class)
+
+- Employees must always have a first name present
+- Employees must always have a last name present
+- Employees have a hourly_rate that is a number (integer) between 40 and 200
+- Employees must always have a store that they belong to (can't have an employee that is not assigned a store)
+- Stores must always have a name that is a minimum of 3 characters
+- Stores have an annual_revenue that is a number (integer) that must be 0 or more
+- BONUS: Stores must carry at least one of the men's or women's apparel (hint: use a [custom validation method](http://guides.rubyonrails.org/active_record_validations.html#custom-methods) - **don't** use a `Validator` class)
+
 2. Ask the user for a store name (store it in a variable)
 3. Attempt to create a store with the inputted name but leave out the other fields (annual_revenue, mens_apparel, and womens_apparel)
 4. Display the error messages provided back from ActiveRecord to the user (one on each line) after you attempt to save/create the record
