@@ -43,7 +43,7 @@ Follow the instructions to work on the exercises within the `exercises` folder. 
 
 You can work with the models with irb by running
 
-    irb -r './setup.rb'
+    bundle exec irb -r './setup.rb'
 
 ## Exercises
 
